@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Day and Night Length</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #222326;
+        }
+
+        h1 {
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            margin: 0;
+
+            color: #F3F0E8;
+            font-size: 42px;
+            font-weight: 300;
+            text-align: center;
+
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .chart-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: min(100vw, 180vh);
+            height: 90vh;
+        }
+
+       
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Day and Night Length</h1>
+
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+
+    <script>
+
+        fetch("./data.json")
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+
+                let datasets = [];
+
+                for (let i = data.length - 1; i >= 0; i--) {
+
+                    let color;
+
+                    if (data[i].kind === "DAY") {
+
+                        color = "#FF391E";
+
+                    } else {
+
+                        color = "#255DAB";
+
+                    }
+
+                    let difference = data[i].minutes - 720;
+
+                    let thickness = 720 + difference * 10;
+
+
+                    datasets.push({
+
+                        data: [1],
+
+                        backgroundColor: [color],
+
+                        borderWidth: 0,
+
+                        weight: Math.max(120, thickness)
+
+                    });
+
+                }
+
+                new Chart(document.getElementById("myChart"), {
+
+                    type: "doughnut",
+
+                    data: {
+
+                        labels: ["Duration"],
+
+                        datasets: datasets
+
+                    },
+
+                    options: {
+
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        rotation: -90,
+                        circumference: 180,
+                        cutout: "0%",
+
+                       
+
+                        plugins: {
+
+                            legend: {
+                                display: false
+                            },
+
+                            tooltip: {
+
+                                callbacks: {
+
+                                    label: function(context) {
+
+                                        let item = data[context.datasetIndex];
+
+                                        let hours = Math.floor(item.minutes / 60);
+
+                                        let minutes = item.minutes % 60;
+
+                                        return [
+                                            item.date + " · " + item.kind,
+                                            hours + "h " + minutes + "m",
+                                            "Sunrise: " + item.sunrise,
+                                            "Sunset: " + item.sunset
+                                        ];
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                });
+
+            });
+
+    </script>
+
+</body>
+
+</html>
