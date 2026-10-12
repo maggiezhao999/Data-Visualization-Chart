@@ -1,0 +1,143 @@
+
+[
+    {
+        "date": "2026-10-01",
+        "kind": "DAY",
+        "minutes": 705,
+        "sunrise": "06:52",
+        "sunset": "18:37"
+    },
+    {
+        "date": "2026-10-01",
+        "kind": "NIGHT",
+        "minutes": 735,
+        "sunrise": "06:52",
+        "sunset": "18:37"
+    },
+    {
+        "date": "2026-10-02",
+        "kind": "DAY",
+        "minutes": 703,
+        "sunrise": "06:53",
+        "sunset": "18:36"
+    },
+    {
+        "date": "2026-10-02",
+        "kind": "NIGHT",
+        "minutes": 737,
+        "sunrise": "06:53",
+        "sunset": "18:36"
+    },
+    {
+        "date": "2026-10-03",
+        "kind": "DAY",
+        "minutes": 700,
+        "sunrise": "06:54",
+        "sunset": "18:34"
+    },
+    {
+        "date": "2026-10-03",
+        "kind": "NIGHT",
+        "minutes": 740,
+        "sunrise": "06:54",
+        "sunset": "18:34"
+    },
+    {
+        "date": "2026-10-04",
+        "kind": "DAY",
+        "minutes": 698,
+        "sunrise": "06:55",
+        "sunset": "18:33"
+    },
+    {
+        "date": "2026-10-04",
+        "kind": "NIGHT",
+        "minutes": 742,
+        "sunrise": "06:55",
+        "sunset": "18:33"
+    },
+    {
+        "date": "2026-10-05",
+        "kind": "DAY",
+        "minutes": 695,
+        "sunrise": "06:56",
+        "sunset": "18:31"
+    },
+    {
+        "date": "2026-10-05",
+        "kind": "NIGHT",
+        "minutes": 745,
+        "sunrise": "06:56",
+        "sunset": "18:31"
+    },
+    {
+        "date": "2026-10-06",
+        "kind": "DAY",
+        "minutes": 692,
+        "sunrise": "06:57",
+        "sunset": "18:29"
+    },
+    {
+        "date": "2026-10-06",
+        "kind": "NIGHT",
+        "minutes": 748,
+        "sunrise": "06:57",
+        "sunset": "18:29"
+    },
+    {
+        "date": "2026-10-07",
+        "kind": "DAY",
+        "minutes": 690,
+        "sunrise": "06:58",
+        "sunset": "18:28"
+    },
+    {
+        "date": "2026-10-07",
+        "kind": "NIGHT",
+        "minutes": 750,
+        "sunrise": "06:58",
+        "sunset": "18:28"
+    },
+    {
+        "date": "2026-10-08",
+        "kind": "DAY",
+        "minutes": 687,
+        "sunrise": "06:59",
+        "sunset": "18:26"
+    },
+    {
+        "date": "2026-10-08",
+        "kind": "NIGHT",
+        "minutes": 753,
+        "sunrise": "06:59",
+        "sunset": "18:26"
+    },
+    {
+        "date": "2026-10-09",
+        "kind": "DAY",
+        "minutes": 684,
+        "sunrise": "07:00",
+        "sunset": "18:24"
+    },
+    {
+        "date": "2026-10-09",
+        "kind": "NIGHT",
+        "minutes": 756,
+        "sunrise": "07:00",
+        "sunset": "18:24"
+    },
+    {
+        "date": "2026-10-10",
+        "kind": "DAY",
+        "minutes": 682,
+        "sunrise": "07:01",
+        "sunset": "18:23"
+    },
+    {
+        "date": "2026-10-10",
+        "kind": "NIGHT",
+        "minutes": 758,
+        "sunrise": "07:01",
+        "sunset": "18:23"
+    }
+]
